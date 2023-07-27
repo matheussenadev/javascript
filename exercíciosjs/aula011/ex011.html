@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codições Compostas</title>
+    <style>
+     p#res{
+        color: blue;
+     }
+    </style>
 </head>
 <body>
     <h1>Verificação de nacionalidade</h1>
     Digite seu país de origem <input type="text" id="país">
     <input type="button" value="verificar" onclick="verificar()">
-    <div id="res"></div>
+    <p id="res"></p>
    <script>
         function verificar(){
-            var país = document.getElementById('país')
+            var país = document.getElementById('país').value
             var res = document.getElementById('res')
-            res.innerHTML = `Seu país de origem é: ${país}`
+            res.innerHTML = `Seu país de origem é: ${país}<br>`
+            if(país == 'Brasil'){
+            res.innerHTML += 'Você é brasileiro'
+        }else if (país != 'Brasil'){
+            res.innerHTML += 'Você é estrangeiro'
         }
-           
+    }
+       
            
    </script>
 </body>
