@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codições Compostas</title>
+</head>
+<body>
+    <h1>Verificação de nacionalidade</h1>
+    Digite seu país de origem <input type="text" id="país">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+   <script>
+        function verificar(){
+            var país = document.getElementById('país')
+            var res = document.getElementById('res')
+            res.innerHTML = `Seu país de origem é: ${país}`
+        }
+           
+           
+   </script>
+</body>
+</html>
