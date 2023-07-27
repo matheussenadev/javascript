@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de números</title>
+</head>
+<body>
+    <h1>Teste sua sorte:</h1>
+    Escolha um número de 0 á 10: <input type="number" name="n" id="n">
+    <input type="button" value="sortear" onclick="sortear()">
+    <div id="res"></div>
+    <script>
+        function sortear(){
+            var n = document.getElementById('n').value
+            var res = document.getElementById('res')
+            res.innerHTML = `O número que você escolheu foi: ${n}<br/>`
+            if(n == '8'){
+                res.innerHTML += 'Você acertou!'
+            } else if (n != '8'){
+                res.innerHTML += 'Não foi dessa vez.'
+            }
+        }
+    </script>
+</body>
+</html>
